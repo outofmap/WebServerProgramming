@@ -20,9 +20,16 @@
 				<div class="page-header">
 					<h1>로그인</h1>
 				</div>
+				
 				<div id="main">
-					<form name="login" method="post" action="/login_action.jsp">
-						<table>
+					<form name="login" method="post" action="/users/login">
+						<c:if test="${not empty errorMessage }">
+						<div class="control-group">
+							<label class="error">${errorMessage}</ label>	
+						</div>
+						</c:if>
+						
+						<table>	
 							<tr>
 								<td>사용자 아이디</td>
 								<td><input type="text" name="userId"></td>

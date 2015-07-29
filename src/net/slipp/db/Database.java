@@ -7,7 +7,12 @@ import net.slipp.user.User;
 
 public class Database {
 	//key는 userId이지만, value가 password,name,e-mail로 3가지나 된다.그래서 class안에 3개의 value를 넣어주자. 
-	private static Map<String, User> users = new HashMap<String, User>() {{
+	private static Map<String, User> users = new HashMap<String, User>() {/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+	{
 		put("user1", new User("user1", "password", "name", "email@gmail.com"));
 	}};
 	
@@ -20,3 +25,4 @@ public class Database {
 		return users.get(userId);
 	}
 }
+  
