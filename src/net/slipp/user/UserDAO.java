@@ -11,7 +11,7 @@ public class UserDAO {
 	public Connection getConnection() {
 		String url = "jdbc:mysql://127.0.0.1:3307/slipp";
 		String id = "root";
-		String pw = "01vlskscj";
+		String pw = "1234";
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			return DriverManager.getConnection(url,id,pw);
@@ -44,6 +44,13 @@ public class UserDAO {
 			return user;
 		}
 		return null;
+	}
+
+	public void removeUser(String userId) throws SQLException {
+		String sql = "delete from USERS where userId = ?";
+		PreparedStatement pstmt = getConnection().prepareStatement(sql);
+		pstmt.setString(1, userId);
+		pstmt.executeUpdate();
 	}
 
 }
