@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/users/save")
-public class SaveUserServlet extends HttpServlet{
+@WebServlet("/users/create")
+public class CreateUserServlet extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String userId = request.getParameter("userId");
@@ -24,8 +24,7 @@ public class SaveUserServlet extends HttpServlet{
 		try {
 			userDAO.addUser(user);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			 System.out.println("error : " + e.getMessage());
 		}
 		
 		//회원가입이 끝났으면 메인페이지로 이동

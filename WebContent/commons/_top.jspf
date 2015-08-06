@@ -16,15 +16,15 @@
           <a class="brand" href="/">지속가능한 삶, 프로그래밍, 프로그래머</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="./index.jsp">Home</a></li>
+              <li><a href="/">Home</a></li>
               <c:choose>
               <c:when test="${not empty userId}">
               <li><a href="/users/logout">로그아웃</a></li>
               <li><a href="/users/updateform">개인정보수정</a></li> 
               </c:when> 
               <c:otherwise>
-              <li><a href="./login.jsp">로그인</a></li>
-              <li><a href="./form.jsp">회원가입</a></li> 
+              <li><a href="/login.jsp">로그인</a></li>
+              <li><a href="/users/createform">회원가입</a></li> 
               </c:otherwise>
               </c:choose>
             </ul>
