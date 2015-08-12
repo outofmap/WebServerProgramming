@@ -20,7 +20,6 @@ public class UpdateUserServlet extends HttpServlet{
 			response.sendRedirect("/");
 			return;
 		}
-		
 		 
 		String userId = request.getParameter("userId");
 		if(!sessionUserId.equals(userId)) {

@@ -23,7 +23,7 @@ public class UpdateFormUserServlet extends HttpServlet{
 		}
 		
 		//session의 attribute값은 userId로 정했음. object를 String으로 downcasting해준다.
-		System.out.println("User Id: "+userId);
+		//System.out.println("User Id: "+userId);
 		UserDAO userDao = new UserDAO();
 		try {
 			User user = userDao.findByUserId(userId);

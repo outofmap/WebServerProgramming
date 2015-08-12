@@ -37,7 +37,13 @@
 				<c:set var="actionSubmit" value='개인정보수정완료' />
 				</c:if>
 				
+				
 				<form class="form-horizontal" action="${actionUrl}" method="post">
+					<c:if test="${not empty errorMessage }">
+					<div class="control-group">
+						<label class="error">${errorMessage}</ label>	
+					</div>
+					</c:if>
 					<div class="control-group">
 						<label class="control-label" for="userId">사용자 아이디</label>
 						<div class="controls">
