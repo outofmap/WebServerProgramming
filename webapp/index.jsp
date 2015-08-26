@@ -18,27 +18,8 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="span12">
-				<table class="table">
-					<tr>
-						<td span="3">사용자 아이디</td>
-						<td span="3">이름</td>
-						<td span="3">이메일</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>javajigi</td>
-						<td>박재성</td>
-						<td>javajigi@slipp.net</td>
-						<td><a href="">수정</a></td>
-					</tr>
-					<tr>
-						<td>sanjigi</td>
-						<td>산지기</td>
-						<td>sanjigi@slipp.net</td>
-						<td><a href="">수정</a></td>
-					</tr>
-				</table>
+			<div class="span6">
+				<h1>메인 페이지</h1>
 			</div>
 		</div>
 	</div>
