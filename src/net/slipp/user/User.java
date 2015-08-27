@@ -13,12 +13,12 @@ import com.google.gson.annotations.Expose;
 public class User {
 	@Expose
 	@NotNull
-	@Size(min = 2, max = 14)
+	@Size(min = 4, max = 8)
 	private String userId;
 	
 	@Expose(serialize = false)
 	@NotNull
-	@Size(min = 2, max = 14)
+	@Size(min = 4, max = 8)
 	private String password;
 	
 	@Expose
@@ -28,6 +28,7 @@ public class User {
 	
 	@Expose
 	@Email
+	@Size(min=0)
  	private String email;
 	
 	public User(String userId, String password, String name, String email) {
