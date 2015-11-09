@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--id에 있는 인터페이스를 생성하는 것과 같음. class를 생성하는 것과 같음. 설정파일에서 class간의 의존관계를 바꿀 수 (주입할 수)있음.  -->
+	<bean id="messageProvider" class="net.slipp.di.HiWorldMessageProvider" />
+	<bean id="messageRenderer" class="net.slipp.di.MessageRender">
+		<property name="messageProvider" ref="messageProvider" />
+	</bean>	
+</beans>

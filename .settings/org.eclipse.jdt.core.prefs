@@ -1,12 +1,14 @@
-#Tue Aug 18 20:45:42 KST 2015
+#Thu Nov 05 16:17:59 KST 2015
+encoding/src/test/java=UTF-8
 org.eclipse.jdt.core.compiler.compliance=1.8
-encoding/src/main/resources=uft-8
+encoding/src/main/resources=UTF-8
+encoding/src/main/java=UTF-8
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
 org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
 eclipse.preferences.version=1
-encoding/src/test/resources=uft-8
+encoding/src/test/resources=UTF-8
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
-encoding/src=uft-8
+encoding/src=UTF-8
 org.eclipse.jdt.core.compiler.source=1.8
-encoding/test=uft-8
+encoding/test=UTF-8
 org.eclipse.jdt.core.compiler.problem.assertIdentifier=error

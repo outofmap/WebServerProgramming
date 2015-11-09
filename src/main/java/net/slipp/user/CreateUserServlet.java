@@ -13,13 +13,21 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import net.slipp.support.MyVaildatorFactory;
 
 
 @WebServlet("/users/create")
 public class CreateUserServlet extends HttpServlet{
+	
+	private static final Logger logger = LoggerFactory.getLogger(CreateUserServlet.class);
+	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
 		//4자 이상, 12자 이하. 영문자/숫자만 허용 
 		String userId = request.getParameter("userId");
 		String password = request.getParameter("password");
@@ -40,9 +48,10 @@ public class CreateUserServlet extends HttpServlet{
 		try {
 			userDAO.addUser(user);
 		} catch (SQLException e) {
-			 System.out.println("error : " + e.getMessage());
+			logger.debug("error : " + e.getMessage());
 		}
 		
+		logger.debug("User: {}",user);
 		//회원가입이 끝났으면 메인페이지로 이동
 		response.sendRedirect("/");
 	}
